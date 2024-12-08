@@ -1,13 +1,14 @@
 # Installation
-1. <a href="">**Clone the repository**</a>
+1. <a href="https://github.com/Hanie-Yekta/MobileCarWash?tab=readme-ov-file#installation">**Clone the repository**</a>
 
 <br>
 
 2. **Create and active virtual environment** (On Windows)
 ```
+cd CarWashBackEnd
 virtualenv venv
 venv\Scripts\Activate
-cd project
+cd MobileCarWashBackEnd
 ```
 
 <br>
