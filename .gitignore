@@ -1,0 +1,6 @@
+#BACK-END
+CarWashBackEnd/MobileCarWashBackEnd/db.sqlite3
+__pycache__/
+.idea/
+*/migrations/*
+venv/
