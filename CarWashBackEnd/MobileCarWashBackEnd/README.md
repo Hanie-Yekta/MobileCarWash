@@ -5,6 +5,7 @@
 
 2. **Create and active virtual environment** (On Windows)
 ```
+cd MobileCarWash
 cd CarWashBackEnd
 virtualenv venv
 venv\Scripts\Activate
