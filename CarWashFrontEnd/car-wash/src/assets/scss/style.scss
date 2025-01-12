@@ -1,0 +1,7 @@
+@use './base' as *;
+@use './abstracts' as *;
+
+.v-time-picker-clock {
+    height: 200px !important;
+    width:200px !important;
+}
