@@ -3,6 +3,12 @@
 
 <br>
 
+## Add video
+
+```sh
+Place a video in this pass: CarWashFrontEnd/car-wash/src/assets/video and name it quickwash-video.
+```
+
 ## Project Setup
 
 ```sh
