@@ -7,13 +7,12 @@
       @mouseover="showTooltip(index)"
       @mouseleave="hideTooltip"
     >
-      <div class="step-progress__number">{{ index + 1 }}</div>
-      <div>
-        <base-icon class="step-progress__icon" :iconName="item.icon" />
-      </div>
       <div v-if="tooltipIndex === index" class="step-progress__tooltip">
         {{ item.step }}
       </div>
+      <div class="step-progress__number">{{ index + 1 }}</div>
+
+      <base-icon class="step-progress__icon" :iconName="item.icon" />
     </div>
     <div
       v-for="index in steps.length - 1"
@@ -32,7 +31,7 @@ const steps = ref([
   { step: "انتخاب سرویس", icon: "car-wash" },
   { step: "انتخاب زمان", icon: "time" },
   { step: "انتخاب مکان", icon: "location" },
-  { step: "پرداخت و ثبت نهایی", icon: "payment" },
+  { step: "ثبت نهایی", icon: "payment" },
 ]);
 const tooltipIndex = ref(null);
 
@@ -48,59 +47,46 @@ const hideTooltip = () => {
 <style lang="scss" scoped>
 .step-progress {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+  justify-content: space-between;
   position: relative;
   &__number {
-    display: inline-block;
     width: 40px;
     height: 40px;
     line-height: 40px;
     border-radius: 50%;
     background-color: #79cdc7;
     color: #fff;
-    margin-bottom: 10px;
   }
 
   &__icon {
+    margin-top:10px;
     color: #436cff;
     width: 35px;
     height: 35px;
   }
 
   &__step {
-    text-align: center;
-    flex: 1;
-    position: relative;
     z-index: 1;
-
-    &:hover .step-progress__tooltip {
-      display: block;
-    }
+    text-align: center;
   }
 
   &__line {
     position: absolute;
     height: 4px;
-    width: 1050px;
+    width: 100%;
     background-color: #bdbdbd;
-    top: 14%;
-    right: 10%;
-    z-index: 0;
+    top: 20%;
   }
 
   &__tooltip {
     position: absolute;
-    bottom: 110%;
-    left: 42%;
+    top: -50%;
     background-color: #bda3c5;
     color: #fff;
     padding: 5px 10px;
     border-radius: 4px;
     white-space: nowrap;
     font-size: 17px;
-    z-index: 2;
-    pointer-events: none;
   }
 }
 </style>
