@@ -173,10 +173,12 @@ getWorkerDashboardInfo();
 .comments {
   display: flex;
   overflow-x: auto;
-  @include scrollbars(5px, #96969690, #eee);
   width: 100%;
   gap: 20px;
   margin-top: 20px;
+
+  @include scrollbars(5px, #96969690, #eee);
+  
   &__comment {
     padding: 10px;
   }
