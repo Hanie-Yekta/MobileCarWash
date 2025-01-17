@@ -24,7 +24,8 @@ const chooseService = (data) => {
     orderStore.setSlectedServiceInfo(data);
     router.push({ name: "order", params: { slug: data.slug } });
   }
-  else if (authStore.isAuthenticated && (data.slug == "ceramic-coating-car" || data.slug == 'engine-wash'))  {
+  else if (authStore.isAuthenticated && data.price.length == 1)  {
+    console.log(data.price.length);
     orderStore.setSpecialServiceInfo(data);
     router.push({ name: "order", params: { slug: data.slug } });
   } else {
@@ -61,7 +62,7 @@ getService();
             <span class="prices__car" v-else-if="item.car_type == 'hatchback'"
               >هاچبک:</span
             >
-            <span class="prices__car" v-else>شاسی بلند:</span>
+            <span class="prices__car" v-else-if="item.car_type == 'sedan'">شاسی بلند:</span>
             <span class="prices__price"> {{ item.price }} تومان</span>
           </div>
         </div>
