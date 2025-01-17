@@ -8,16 +8,16 @@
         </div>
     </div>
 </template>
-<style scoped lang="scss">
 
+<style scoped lang="scss">
 .container{
 height: 100vh;
 max-width:100vw;
 background-color: rgb(246, 248, 249);
 display: flex;
 align-items: center;
-
 }
+
 .auth-container{
     background-color: rgb(255, 255, 255);
     border-radius:50px;
@@ -25,17 +25,14 @@ align-items: center;
     height: 95%;
     margin: auto;
     display: flex;
-    flex-direction:row;
 
     &__form{
         width:55%;
     }
-
 
     &__image{
         border-radius:50px;
         width:45%;
     }
 }
-
 </style>
