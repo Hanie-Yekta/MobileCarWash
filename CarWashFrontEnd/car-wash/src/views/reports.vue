@@ -18,7 +18,6 @@ async function getAdminDashboardInfo() {
         Authorization: `Bearer ${authStore.token}`,
       },
     });
-    console.log(data);
     activeCustomers.value = data.active_customers;
     activeWorkers.value = data.active_workers;
     inactiveWorkers.value = data.inactive_workers;
@@ -93,11 +92,12 @@ getAdminDashboardInfo();
 }
 
 .reports {
-  @include scrollbars(5px, #96969690, #eee);
   display: flex;
   width: 100%;
   overflow: auto;
   gap: 20px;
+
+  @include scrollbars(5px, #96969690, #eee);
 
   &__report {
     width: 300px;
