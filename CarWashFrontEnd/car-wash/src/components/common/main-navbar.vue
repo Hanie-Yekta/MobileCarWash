@@ -81,7 +81,7 @@ if(authStore.token){
           >داشبورد</router-link
         >
       </li>
-      <li>
+      <li v-if=" userInfo.userInfo?.firstName">
         {{ userInfo.userInfo.firstName }} {{ userInfo.userInfo.lastName }}
       </li>
       <li>
