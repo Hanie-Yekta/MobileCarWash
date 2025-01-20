@@ -14,7 +14,6 @@ async function getServices() {
     method: "get",
   });
   services.value = data.data;
-  console.log(data)
   serviceStore.setService(services.value);
 }
 getServices();

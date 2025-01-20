@@ -25,7 +25,6 @@ const chooseService = (data) => {
     router.push({ name: "order", params: { slug: data.slug } });
   }
   else if (authStore.isAuthenticated && data.price.length == 1)  {
-    console.log(data.price.length);
     orderStore.setSpecialServiceInfo(data);
     router.push({ name: "order", params: { slug: data.slug } });
   } else {

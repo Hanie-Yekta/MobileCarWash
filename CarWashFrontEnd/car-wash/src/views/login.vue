@@ -54,7 +54,6 @@ async function refreshToken() {
         refresh: authStore.refreshToken,
       },
     });
-    console.log(response);
     authStore.setToken(response.data.access);
   } catch (error) {
     console.log(error);

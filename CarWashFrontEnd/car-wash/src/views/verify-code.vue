@@ -43,7 +43,6 @@ async function verifyCode() {
     router.push({ name: "newpassword" });
 
   } catch (error) {
-    console.log(error);
     $toast.open({
       message: responseList.authentication["failed-verify-code"],
       position: "top-left",

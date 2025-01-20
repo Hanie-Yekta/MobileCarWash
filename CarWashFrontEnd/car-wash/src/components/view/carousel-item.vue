@@ -11,7 +11,6 @@ import { computed } from "vue";
 const backgroundImage = computed(() => {
   const baseUrl = "http://127.0.0.1:8000";
   const x = baseUrl.concat(props.service.image);
-  console.log(x);
   return `url(${x})`;
 });
 </script>

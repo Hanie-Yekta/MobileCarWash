@@ -24,7 +24,6 @@ watch(
 );
 
 const selectCar = (index, item) => {
-  console.log(item.car_type)
   selectedCarIndex.value = index;
   selectedCarPrice.value = item.price;
   selectedCarType.value = item.car_type;

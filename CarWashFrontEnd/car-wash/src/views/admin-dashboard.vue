@@ -61,7 +61,6 @@ async function getAdminDashboardInfo() {
         Authorization: `Bearer ${authStore.token}`,
       },
     });
-    console.log(data);
     workers.value = data.available_workers;
     orders.value = data.orders;
     waitingOrders.value = [];

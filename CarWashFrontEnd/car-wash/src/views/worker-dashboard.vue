@@ -57,7 +57,6 @@ async function getWorkerDashboardInfo() {
         Authorization: `Bearer ${authStore.token}`,
       },
     });
-    console.log(data);
     orders.value = data.orders;
     comments.value = data.comments;
     showOrderDetail.value = new Array(orders.value?.length).fill(false);
