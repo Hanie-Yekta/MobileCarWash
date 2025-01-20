@@ -6,7 +6,7 @@ import { useToast } from "vue-toast-notification";
 import "vue-toast-notification/dist/theme-sugar.css";
 import BaseButton from "@/components/common/base-button.vue";
 import { responseList } from "../../responses/responses.js";
-const emit = defineEmits(["nextProcess"]);
+const emit = defineEmits(["nextProcess","showOrderDetail"]);
 
 const $toast = useToast();
 
