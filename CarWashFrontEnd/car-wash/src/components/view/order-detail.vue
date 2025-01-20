@@ -6,8 +6,9 @@ const authStore = store.authStore();
 import { useToast } from "vue-toast-notification";
 import "vue-toast-notification/dist/theme-sugar.css";
 import BaseButton from "@/components/common/base-button.vue";
+import BaseIcon from "@/components/common/base-icon.vue";
 import { responseList } from "../../responses/responses";
-const emit = defineEmits(["nextProcess"]);
+const emit = defineEmits(["nextProcess","hideDetail"]);
 const baseUrl = ref("http://127.0.0.1:8000");
 const $toast = useToast();
 
@@ -145,6 +146,7 @@ async function payment() {
 <template>
 
   <div class="order-detail">
+    <base-icon @click="$emit('hideDetail')" class="order-detail__close-icon" iconName="close"/>
     <div class="oreder-detail__image-container">
       <img
         class="order-detail__image"
@@ -266,6 +268,12 @@ async function payment() {
   top: 4%;
   left: 35%;
   width: 27%;
+
+  &__close-icon{
+    width:30px;
+    height: 30px;
+    color:gray;
+  }
 
   &__image {
     width: 100%;

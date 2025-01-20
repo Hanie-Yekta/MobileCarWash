@@ -139,6 +139,7 @@ getCustomerDashboardInfo();
           <order-detail
             v-show="showWaitingOrderDetail[index]"
             @nextProcess="nextProcess"
+            @hideDetail="updateOrderDetailVisibility('clean')"
             :order="item"
             class="order-detail"
           />
@@ -154,6 +155,7 @@ getCustomerDashboardInfo();
           />
           <order-detail
             @nextProcess="nextProcess"
+            @hideDetail="updateOrderDetailVisibility('clean')"
             v-show="showNotPaidOrderDetail[index]"
             :order="item"
             class="order-detail"
@@ -171,6 +173,7 @@ getCustomerDashboardInfo();
           <order-detail
             v-show="showInProgressOrderDetail[index]"
             @nextProcess="nextProcess"
+            @hideDetail="updateOrderDetailVisibility('clean')"
             :order="item"
             class="order-detail"
           />
@@ -187,6 +190,7 @@ getCustomerDashboardInfo();
           <order-detail
             v-show="showFinishedOrderDetail[index]"
             @nextProcess="nextProcess"
+            @hideDetail="updateOrderDetailVisibility('clean')"
             :order="item"
             class="order-detail"
           />
